@@ -44,7 +44,7 @@ def create_short_url(long_link: LongLink, expires: bool = True):
         token = token.decode()
         return JSONResponse({"short_url": config.SERVICE_ROOT+token}, status_code=208)
     while True: 
-        token = uuid.uuid4().hex[:9].upper()
+        token = uuid.uuid4().hex[:9]
         if not token_to_link.get(token):
             token_to_link.set(token, long_link.link)
             link_to_token.set(long_link.link, token)
