@@ -1,0 +1,26 @@
+version: '3'
+services:
+
+  redis:
+    image: redis
+    ports:
+      - "6380:6379"
+    volumes:
+      - users-cache-data:/data
+    environment:
+      - REDIS_REPLICATION_MODE=master
+
+  backend:
+    build: ./backend
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - SERVICE_ROOT=http://localhost/
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "80:80"
+
+volumes:
+  users-cache-data:

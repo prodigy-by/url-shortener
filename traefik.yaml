@@ -1,0 +1,13 @@
+http:
+  routers:
+    to-api:
+      rule: "Host(`api.localhost`)"
+      entryPoints:
+        - "http"
+      service: api
+
+  services:
+    auth:
+      loadBalancer:
+        servers:
+          - url: "http://backend:8000/"
