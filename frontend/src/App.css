@@ -1,0 +1,89 @@
+#root {
+  max-width: 1280px;
+  min-height: 93vh;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  height: 10em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em var(--secondary-hover-color));
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.create-link-form{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.create-link-field {
+  background-color: var(--secondary-color);
+  padding: 0;
+  min-height: 2.5rem;
+  max-height: 2.5rem;
+  min-width: 40%;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 20px;
+  padding: 0 2rem;
+}
+
+.create-link-button {
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+  margin-left: 1.5rem;
+  padding: 0;
+  min-height: 2.5rem;
+  padding: 0 0.5em;
+  border: none;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.short-link{
+  margin-top: 5rem;
+  font-size: 1.75rem;
+}
+
+.short-link a{
+  text-decoration: none;
+  color: var(--secondary-color)
+}
+
+.short-link a:visited{
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+.short-link-text{
+  font-size: 1.5rem;
+}
+
+footer{
+  color: var(--secondary-color);
+}
+
+footer a{
+  text-decoration: none;
+}
+
+footer  a:visited{
+  color: var(--secondary-color);
+}
+
+a:hover{
+  color: var(--secondary-hover-text)
+}

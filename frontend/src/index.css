@@ -1,0 +1,20 @@
+:root{
+    --primary-color: #1D2C39;
+    --accent-color: #EB7272;
+    --secondary-color: #F0FEFF;
+    --secondary-hover-color: #F0FEFFaa;
+    --secondary-hover-text: #6d7171;
+}
+
+body{
+    background-color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    color: var(--secondary-color);
+    min-height: 100vh;
+}
+
+footer{
+    margin-top: auto;
+}
